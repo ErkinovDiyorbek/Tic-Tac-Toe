@@ -1,0 +1,65 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Tic Tac Toe</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>X va O</h1>
+
+		<div class="game-modes">
+			<button class="mode-btn active" id="singlePlayerBtn">Kompyuter bilan</button>
+			<button class="mode-btn" id="multiPlayerBtn">Sherik bilan</button>
+		</div>
+
+		<div class="game-header">
+			<div class="scoreboard">
+				<div class="score player-x">
+					<div class="score-label" id="playerXLabel">Foydalanuvchi (X)</div>
+					<div class="score-value" id="playerXScore">0</div>
+				</div>
+				<div class="score player-o">
+					<div class="score-label" id="playerOLabel">Kompyuter (O)</div>
+					<div class="score-value" id="playerOScore">0</div>
+				</div>
+			</div>
+
+			<div class="game-settings" id="gameSettings">
+				<label for="difficultySelect">Daraja:</label>
+				<select id="difficultySelect">
+					<option value="easy">Oddiy</option>
+					<option value="medium">Oʻrtacha</option>
+					<option value="hard">Qiyin</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="board" id="board"></div>
+
+		<div class="status" id="status">X navbati</div>
+
+		<div class="controls">
+			<button onclick="resetGame()">Qayta boshlash</button>
+			<button onclick="showHowToPlay()">Qoidalar</button>
+		</div>
+	</div>
+
+	<div class="modal" id="modal">
+		<div class="modal-content">
+			<h2 id="modalTitle">Qoidalar</h2>
+			<p id="modalMessage">X va O o'yini 3x3 katakda o'ynaladi. Birinchi navbatda siz (X) boshlaysiz. Bir qatorda 3 ta
+				bir xil belgi qo'ygan g'olib bo'ladi.</p>
+			<button onclick="hideModal()">Yopish</button>
+		</div>
+	</div>
+
+
+	<script src="script.js"></script>
+</body>
+
+</html>
